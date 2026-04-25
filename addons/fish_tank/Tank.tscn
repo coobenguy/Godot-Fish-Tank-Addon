@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://cvd8ngd5qnp7d"]
+
+[ext_resource type="Script" uid="uid://bkuan6kxfdc62" path="res://addons/fish_tank/stuff/tank.gd" id="1_cubnf"]
+[ext_resource type="Texture2D" uid="uid://b50uxu4360ym6" path="res://addons/fish_tank/assets/waterSurface.webp" id="2_cubnf"]
+[ext_resource type="Texture2D" uid="uid://i8pkvq647kr0" path="res://addons/fish_tank/assets/sand.webp" id="2_ll1mg"]
+[ext_resource type="Texture2D" uid="uid://vqahqxx12hnx" path="res://addons/fish_tank/Untitlgfhfghed.png" id="4_3fuj3"]
+[ext_resource type="Texture2D" uid="uid://dvk4hxd35sje7" path="res://addons/fish_tank/assets/wisps.png" id="5_qxuh8"]
+
+[sub_resource type="Gradient" id="Gradient_7thuw"]
+colors = PackedColorArray(0.25189167, 0.31739905, 0.4979068, 1, 0.22438088, 0.28585398, 0.3966275, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uy8gf"]
+gradient = SubResource("Gradient_7thuw")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_cubnf"]
+colors = PackedColorArray(0.007843138, 0.039215688, 0.09803922, 0.80784315, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3fuj3"]
+gradient = SubResource("Gradient_cubnf")
+
+[sub_resource type="Gradient" id="Gradient_3fuj3"]
+offsets = PackedFloat32Array(0, 0.3824885, 0.49308756, 0.5529954, 1)
+colors = PackedColorArray(1, 1, 1, 0.050980393, 0.9783895, 0.9783895, 0.9783895, 0.11029412, 1, 1, 1, 0.16078432, 0.95686275, 0.95686275, 0.95686275, 0.101960786, 1, 1, 1, 0.06666667)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qxuh8"]
+gradient = SubResource("Gradient_3fuj3")
+fill_from = Vector2(0, 0.5555556)
+fill_to = Vector2(0.8162393, 0.042735044)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qxuh8"]
+blend_mode = 1
+
+[node name="Tank" type="Control" unique_id=764958692]
+z_index = -1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+script = ExtResource("1_cubnf")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=696435508]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_uy8gf")
+
+[node name="ColorRect3" type="TextureRect" parent="." unique_id=1749725081]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -448.0
+offset_top = 7.0
+offset_right = 448.0
+offset_bottom = 107.0
+grow_horizontal = 2
+texture = ExtResource("2_cubnf")
+stretch_mode = 1
+
+[node name="ColorRect2" type="TextureRect" parent="." unique_id=2031091324]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_top = -480.0
+offset_right = 448.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_ll1mg")
+stretch_mode = 1
+
+[node name="PosAnchor" type="Control" parent="." unique_id=1064951725]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=915372519]
+visible = false
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 155.0
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_3fuj3")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=160531858]
+visible = false
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset_ratio = Vector2(1, 0.5)
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(2.09, 0)
+offset_transform_scale = Vector2(3.23, 1)
+texture = SubResource("GradientTexture2D_3fuj3")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1076181714]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_qxuh8")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1854225243]
+visible = false
+self_modulate = Color(1, 1, 1, 0.02745098)
+material = SubResource("CanvasItemMaterial_qxuh8")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -424.0
+offset_right = 424.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3fuj3")
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=1155133717]
+modulate = Color(0.65021986, 0.7980228, 0.9750753, 1)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -443.0
+offset_top = 16.0
+offset_right = 453.0
+offset_bottom = 269.0
+grow_horizontal = 2
+texture = ExtResource("5_qxuh8")
+expand_mode = 1

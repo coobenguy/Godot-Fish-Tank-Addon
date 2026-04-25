@@ -7,13 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://dvk4hxd35sje7" path="res://addons/fish_tank/assets/wisps.png" id="5_qxuh8"]
 
 [sub_resource type="Gradient" id="Gradient_7thuw"]
-colors = PackedColorArray(0.25189167, 0.31739905, 0.4979068, 1, 0.22438088, 0.28585398, 0.3966275, 1)
+colors = PackedColorArray(0.3456234, 0.42984825, 0.60367477, 1, 0.14187855, 0.18484735, 0.38711232, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_uy8gf"]
 gradient = SubResource("Gradient_7thuw")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 0.5)
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 0.752)
 
 [sub_resource type="Gradient" id="Gradient_cubnf"]
 colors = PackedColorArray(0.007843138, 0.039215688, 0.09803922, 0.80784315, 0, 0, 0, 0)
@@ -32,6 +31,18 @@ fill_to = Vector2(0.8162393, 0.042735044)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qxuh8"]
 blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hia2v"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_il81a"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0.11764706)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o0vrl"]
+gradient = SubResource("Gradient_il81a")
+fill = 1
+fill_from = Vector2(0.491453, 0.4957265)
+fill_to = Vector2(1, 0.5)
 
 [node name="Tank" type="Control" unique_id=764958692]
 z_index = -1
@@ -156,3 +167,17 @@ offset_bottom = 269.0
 grow_horizontal = 2
 texture = ExtResource("5_qxuh8")
 expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="." unique_id=286392607]
+self_modulate = Color(0.8461848, 0.82503086, 0.67738515, 1)
+material = SubResource("CanvasItemMaterial_hia2v")
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -522.0
+offset_top = -204.0
+offset_right = -36.0
+offset_bottom = 188.0
+grow_horizontal = 0
+texture = SubResource("GradientTexture2D_o0vrl")

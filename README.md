@@ -1,3 +1,5 @@
+WORK IN PROGRESS
+
 A Godot Addon that adds a fishtank to the Outtput panel with little fishes 
 
 Assets are placeholder
